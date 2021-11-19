@@ -2,7 +2,9 @@
 
 const express = require("express");
 const cors = require("cors");
+const morgan = require("morgan");
 const routes = require("./routes");
+require('./config/connection')
 
 class App {
   // Estarta
@@ -14,6 +16,7 @@ class App {
   middlewares() {
     // Simplifica a aplicação
     this.app.use(express.json());
+    this.app.use(morgan('dev'));
 
     // Next intercepta a requisição ou validar um dado e prossegue para rota desejada atuar
     this.app.use((req, res, next) => {
