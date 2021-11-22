@@ -1,4 +1,4 @@
-// Conexção multipla (Pode ser integrada com vários BD)
+// Conexão multipla (Pode ser integrada com vários BD)
 
 const mongoose = require("mongoose");
 
