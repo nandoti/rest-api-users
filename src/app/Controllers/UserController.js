@@ -1,9 +1,8 @@
-const User = require('../Models/User');
-const bcrypt = require('bcryptjs');
-const yup = require('yup');
+const User = require("../Models/User");
+const bcrypt = require("bcryptjs");
+const yup = require("yup");
 
 class UserController {
-  
   show(req, res) {
     let users = [
       "Fernando",
@@ -49,7 +48,6 @@ class UserController {
     // Variáves criada automaticamente (Desestrutuação dos dados da requisição)
     const { name, email, password } = req.body;
 
-
     const data = {
       name,
       email,
@@ -65,11 +63,12 @@ class UserController {
       if (err)
         return res.status(400).json({
           error: true,
-          message: "Erro ao inserir usuário no MongoBD",
+          message: "Erro ao tentar inserir usuário no MongoDB",
         });
+
       return res.status(200).json({
         error: false,
-        message: "Usuário cadastrado com sucesso",
+        message: "Usuário Cadastrado com sucesso",
       });
     });
   }

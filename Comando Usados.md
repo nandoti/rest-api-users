@@ -21,3 +21,5 @@ III - npm star (Starta)
 IV - yarn add mongoose (Bando mongoBD)
 V - add morgan (Gerencia as requisições da API)
 VI - yarn add bcryptjs (Criptografia da senha)
+VIII - https://emn178.github.io/online-tools/sha256.html
+IV - yarn add jsonwebtoken (instalar  biblioteca para validação do Token)
